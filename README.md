@@ -26,20 +26,20 @@ This monorepo contains two main subprojects:
 
 ## 🛠️ Tech Stack
 
-| Layer          | Technologies                           |
-| -------------- | ---------------------------------------|
-| Frontend       | Next.js, Tailwind CSS                  |
-| Backend        | Node.js, Express.js, Prisma ORM        |
-| Database       | PostgreSQL (hosted on Railway)         |
-| AI Integration | Gemini 1.5 / Gemini Flash              |
-| Deployment     | Vercel (Frontend), VM Azure (Backend)  |
+| Layer          | Technologies                         |
+| -------------- | ------------------------------------ |
+| Frontend       | Next.js, Tailwind CSS                |
+| Backend        | Node.js, Express.js, Prisma ORM      |
+| Database       | PostgreSQL (hosted on Railway)       |
+| AI Integration | Gemini 1.5 / Gemini Flash            |
+| Deployment     | Vercel (Frontend), Vercel (Backend) |
 
 
 ---
 ## 👨‍💻 Author
 
 - GitHub: @Arropi
-- GitHub: @Excelfthn
+- GitHub: @altafparves
 
 ---
 ## 📄 License

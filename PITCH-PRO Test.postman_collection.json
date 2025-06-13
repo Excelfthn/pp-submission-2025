@@ -1,0 +1,502 @@
+{
+	"info": {
+		"_postman_id": "0d63960c-f4c0-4ef4-896a-7c8f2995c961",
+		"name": "PITCH-PRO Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "44897709",
+		"_collection_link": "https://warped-sunset-913146.postman.co/workspace/My-Workspace~7032c9e3-3d7c-4694-822b-2c302e4b8867/collection/36928132-0d63960c-f4c0-4ef4-896a-7c8f2995c961?action=share&source=collection_link&creator=44897709"
+	},
+	"item": [
+		{
+			"name": "REGISTER",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"dihakimin\",\r\n    \"email\": \"andihadiamanahh@gmail.com\",\r\n    \"password\" : \"Diana\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Link}}/register",
+					"host": [
+						"{{Link}}"
+					],
+					"path": [
+						"register"
+					]
+				},
+				"description": "Input username, email, and password. Need email and username ever been used, for the password at least have 8 character"
+			},
+			"response": []
+		},
+		{
+			"name": "LOGIN",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"andihadiamanah@gmail.com\",\r\n    \"password\" : \"Dian ahmad\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Link}}/login",
+					"host": [
+						"{{Link}}"
+					],
+					"path": [
+						"login"
+					]
+				},
+				"description": "Login user input email and password have been registered"
+			},
+			"response": []
+		},
+		{
+			"name": "GENERATE",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJnZXRVc2VyIjp7InVzZXJfaWQiOjgsImVtYWlsIjoiYW5kaWhhZGlhbWFuYWhAZ21haWwuY29tIiwidXNlcm5hbWUiOiJkaWhha2ltaSIsInhwIjowLCJhdmF0YXIiOm51bGwsImhhc2hfcGFzc3dvcmQiOiIkMmIkMTAkQ2RqOUhGR0lrTmlTbUNhdnJFUi9qdTc4bUxtaHBzRVFydUZTaUFMVzBYZzFPRVRQZDYxajIiLCJjcmVhdGVkX2F0IjoiMjAyNS0wNC0yNlQxMzo0MzoyNS4xNTFaIiwidXBkYXRlZF9hdCI6IjIwMjUtMDQtMjZUMTM6NDM6MjUuMTUxWiIsImF2YXRhcl9taW1ldHlwZSI6bnVsbH0sImlhdCI6MTc0NTcxNjI4MiwiZXhwIjoxNzQ1ODAyNjgyfQ.gE2CVIwGUq-6keLxy9m8v-MnS2oPWNWUugUgJDBu-Xk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "audio",
+							"type": "file",
+							"src": "/C:/Users/User/Downloads/Record (online-voice-recorder.com).mp3"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{Link}}/generate/1",
+					"host": [
+						"{{Link}}"
+					],
+					"path": [
+						"generate",
+						"1"
+					]
+				},
+				"description": "input audio to get analyze from ai, dont forget to use token that you get after logged in"
+			},
+			"response": []
+		},
+		{
+			"name": "GENERATE",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJnZXRVc2VyIjp7InVzZXJfaWQiOjgsImVtYWlsIjoiYW5kaWhhZGlhbWFuYWhAZ21haWwuY29tIiwidXNlcm5hbWUiOiJkaWhha2ltaSIsInhwIjowLCJhdmF0YXIiOm51bGwsImhhc2hfcGFzc3dvcmQiOiIkMmIkMTAkQ2RqOUhGR0lrTmlTbUNhdnJFUi9qdTc4bUxtaHBzRVFydUZTaUFMVzBYZzFPRVRQZDYxajIiLCJjcmVhdGVkX2F0IjoiMjAyNS0wNC0yNlQxMzo0MzoyNS4xNTFaIiwidXBkYXRlZF9hdCI6IjIwMjUtMDQtMjZUMTM6NDM6MjUuMTUxWiIsImF2YXRhcl9taW1ldHlwZSI6bnVsbH0sImlhdCI6MTc0NTcxNjI4MiwiZXhwIjoxNzQ1ODAyNjgyfQ.gE2CVIwGUq-6keLxy9m8v-MnS2oPWNWUugUgJDBu-Xk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "audio",
+							"type": "file",
+							"src": "/C:/Users/User/Downloads/Record (online-voice-recorder.com).mp3"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{Link}}/generate/1",
+					"host": [
+						"{{Link}}"
+					],
+					"path": [
+						"generate",
+						"1"
+					]
+				},
+				"description": "input audio to get analyze from ai, dont forget to use token that you get after logged in"
+			},
+			"response": []
+		},
+		{
+			"name": "GENERATE",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "{{Link}}/generate/1",
+					"host": [
+						"{{Link}}"
+					],
+					"path": [
+						"generate",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PRE TEST",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJnZXRVc2VyIjp7InVzZXJfaWQiOjgsImVtYWlsIjoiYW5kaWhhZGlhbWFuYWhAZ21haWwuY29tIiwidXNlcm5hbWUiOiJkaWhha2ltaSIsInhwIjowLCJhdmF0YXIiOm51bGwsImhhc2hfcGFzc3dvcmQiOiIkMmIkMTAkQ2RqOUhGR0lrTmlTbUNhdnJFUi9qdTc4bUxtaHBzRVFydUZTaUFMVzBYZzFPRVRQZDYxajIiLCJjcmVhdGVkX2F0IjoiMjAyNS0wNC0yNlQxMzo0MzoyNS4xNTFaIiwidXBkYXRlZF9hdCI6IjIwMjUtMDQtMjZUMTM6NDM6MjUuMTUxWiIsImF2YXRhcl9taW1ldHlwZSI6bnVsbH0sImlhdCI6MTc0NTcxNjI4MiwiZXhwIjoxNzQ1ODAyNjgyfQ.gE2CVIwGUq-6keLxy9m8v-MnS2oPWNWUugUgJDBu-Xk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"anxiety_level\": 6,\r\n    \"anxiety_reason\": \"The Topic\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Link}}/pre-test/1",
+					"host": [
+						"{{Link}}"
+					],
+					"path": [
+						"pre-test",
+						"1"
+					]
+				},
+				"description": "need anxiety level with integer data type and the reason of anxiety. dont forget to use token that you get after logged in"
+			},
+			"response": []
+		},
+		{
+			"name": "PRE TEST",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJnZXRVc2VyIjp7InVzZXJfaWQiOjgsImVtYWlsIjoiYW5kaWhhZGlhbWFuYWhAZ21haWwuY29tIiwidXNlcm5hbWUiOiJkaWhha2ltaSIsInhwIjowLCJhdmF0YXIiOm51bGwsImhhc2hfcGFzc3dvcmQiOiIkMmIkMTAkQ2RqOUhGR0lrTmlTbUNhdnJFUi9qdTc4bUxtaHBzRVFydUZTaUFMVzBYZzFPRVRQZDYxajIiLCJjcmVhdGVkX2F0IjoiMjAyNS0wNC0yNlQxMzo0MzoyNS4xNTFaIiwidXBkYXRlZF9hdCI6IjIwMjUtMDQtMjZUMTM6NDM6MjUuMTUxWiIsImF2YXRhcl9taW1ldHlwZSI6bnVsbH0sImlhdCI6MTc0NTcxNjI4MiwiZXhwIjoxNzQ1ODAyNjgyfQ.gE2CVIwGUq-6keLxy9m8v-MnS2oPWNWUugUgJDBu-Xk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"anxiety_level\": 6,\r\n    \"anxiety_reason\": \"The Topic\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Link}}/pre-test/1",
+					"host": [
+						"{{Link}}"
+					],
+					"path": [
+						"pre-test",
+						"1"
+					]
+				},
+				"description": "need anxiety level with integer data type and the reason of anxiety. dont forget to use token that you get after logged in"
+			},
+			"response": []
+		},
+		{
+			"name": "POST TEST",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJnZXRVc2VyIjp7InVzZXJfaWQiOjgsImVtYWlsIjoiYW5kaWhhZGlhbWFuYWhAZ21haWwuY29tIiwidXNlcm5hbWUiOiJkaWhha2ltaSIsInhwIjowLCJhdmF0YXIiOm51bGwsImhhc2hfcGFzc3dvcmQiOiIkMmIkMTAkQ2RqOUhGR0lrTmlTbUNhdnJFUi9qdTc4bUxtaHBzRVFydUZTaUFMVzBYZzFPRVRQZDYxajIiLCJjcmVhdGVkX2F0IjoiMjAyNS0wNC0yNlQxMzo0MzoyNS4xNTFaIiwidXBkYXRlZF9hdCI6IjIwMjUtMDQtMjZUMTM6NDM6MjUuMTUxWiIsImF2YXRhcl9taW1ldHlwZSI6bnVsbH0sImlhdCI6MTc0NTcxNjI4MiwiZXhwIjoxNzQ1ODAyNjgyfQ.gE2CVIwGUq-6keLxy9m8v-MnS2oPWNWUugUgJDBu-Xk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"anxiety_level\": 3,\r\n    \"anxiety_reason\": \"The Audience\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Link}}/post-test/1",
+					"host": [
+						"{{Link}}"
+					],
+					"path": [
+						"post-test",
+						"1"
+					]
+				},
+				"description": "need anxiety level with integer data type and the reason of anxiety. dont forget to use token that you get after logged in"
+			},
+			"response": []
+		},
+		{
+			"name": "POST TEST",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJnZXRVc2VyIjp7InVzZXJfaWQiOjgsImVtYWlsIjoiYW5kaWhhZGlhbWFuYWhAZ21haWwuY29tIiwidXNlcm5hbWUiOiJkaWhha2ltaSIsInhwIjowLCJhdmF0YXIiOm51bGwsImhhc2hfcGFzc3dvcmQiOiIkMmIkMTAkQ2RqOUhGR0lrTmlTbUNhdnJFUi9qdTc4bUxtaHBzRVFydUZTaUFMVzBYZzFPRVRQZDYxajIiLCJjcmVhdGVkX2F0IjoiMjAyNS0wNC0yNlQxMzo0MzoyNS4xNTFaIiwidXBkYXRlZF9hdCI6IjIwMjUtMDQtMjZUMTM6NDM6MjUuMTUxWiIsImF2YXRhcl9taW1ldHlwZSI6bnVsbH0sImlhdCI6MTc0NTcxNjI4MiwiZXhwIjoxNzQ1ODAyNjgyfQ.gE2CVIwGUq-6keLxy9m8v-MnS2oPWNWUugUgJDBu-Xk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"anxiety_level\": 3,\r\n    \"anxiety_reason\": \"The Audience\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Link}}/post-test/1",
+					"host": [
+						"{{Link}}"
+					],
+					"path": [
+						"post-test",
+						"1"
+					]
+				},
+				"description": "need anxiety level with integer data type and the reason of anxiety. dont forget to use token that you get after logged in"
+			},
+			"response": []
+		},
+		{
+			"name": "ENDING FEEDBACK",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJnZXRVc2VyIjp7InVzZXJfaWQiOjgsImVtYWlsIjoiYW5kaWhhZGlhbWFuYWhAZ21haWwuY29tIiwidXNlcm5hbWUiOiJkaWhha2ltaSIsInhwIjowLCJhdmF0YXIiOm51bGwsImhhc2hfcGFzc3dvcmQiOiIkMmIkMTAkQ2RqOUhGR0lrTmlTbUNhdnJFUi9qdTc4bUxtaHBzRVFydUZTaUFMVzBYZzFPRVRQZDYxajIiLCJjcmVhdGVkX2F0IjoiMjAyNS0wNC0yNlQxMzo0MzoyNS4xNTFaIiwidXBkYXRlZF9hdCI6IjIwMjUtMDQtMjZUMTM6NDM6MjUuMTUxWiIsImF2YXRhcl9taW1ldHlwZSI6bnVsbH0sImlhdCI6MTc0NTcxNjI4MiwiZXhwIjoxNzQ1ODAyNjgyfQ.gE2CVIwGUq-6keLxy9m8v-MnS2oPWNWUugUgJDBu-Xk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Link}}/ending_feedback/1",
+					"host": [
+						"{{Link}}"
+					],
+					"path": [
+						"ending_feedback",
+						"1"
+					]
+				},
+				"description": "You can get all scenario in one stories. but need to give the chapter of stories in params. dont forget to use token that you get after logged in"
+			},
+			"response": []
+		},
+		{
+			"name": "STORIES",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Link}}/stories/1",
+					"host": [
+						"{{Link}}"
+					],
+					"path": [
+						"stories",
+						"1"
+					]
+				},
+				"description": "You can get all scenario in one stories. but need to give the chapter of stories in params. dont forget to use token that you get after logged in"
+			},
+			"response": []
+		},
+		{
+			"name": "USER XP",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJnZXRVc2VyIjp7InVzZXJfaWQiOjgsImVtYWlsIjoiYW5kaWhhZGlhbWFuYWhAZ21haWwuY29tIiwidXNlcm5hbWUiOiJkaWhha2ltaSIsInhwIjowLCJhdmF0YXIiOm51bGwsImhhc2hfcGFzc3dvcmQiOiIkMmIkMTAkQ2RqOUhGR0lrTmlTbUNhdnJFUi9qdTc4bUxtaHBzRVFydUZTaUFMVzBYZzFPRVRQZDYxajIiLCJjcmVhdGVkX2F0IjoiMjAyNS0wNC0yNlQxMzo0MzoyNS4xNTFaIiwidXBkYXRlZF9hdCI6IjIwMjUtMDQtMjZUMTM6NDM6MjUuMTUxWiIsImF2YXRhcl9taW1ldHlwZSI6bnVsbH0sImlhdCI6MTc0NTcxNjI4MiwiZXhwIjoxNzQ1ODAyNjgyfQ.gE2CVIwGUq-6keLxy9m8v-MnS2oPWNWUugUgJDBu-Xk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/user/xp",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"xp"
+					]
+				},
+				"description": "You can get all scenario in one stories. but need to give the chapter of stories in params. dont forget to use token that you get after logged in"
+			},
+			"response": []
+		},
+		{
+			"name": "USER PROFILE",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJnZXRVc2VyIjp7InVzZXJfaWQiOjgsImVtYWlsIjoiYW5kaWhhZGlhbWFuYWhAZ21haWwuY29tIiwidXNlcm5hbWUiOiJkaWhha2ltaSIsInhwIjowLCJhdmF0YXIiOm51bGwsImhhc2hfcGFzc3dvcmQiOiIkMmIkMTAkQ2RqOUhGR0lrTmlTbUNhdnJFUi9qdTc4bUxtaHBzRVFydUZTaUFMVzBYZzFPRVRQZDYxajIiLCJjcmVhdGVkX2F0IjoiMjAyNS0wNC0yNlQxMzo0MzoyNS4xNTFaIiwidXBkYXRlZF9hdCI6IjIwMjUtMDQtMjZUMTM6NDM6MjUuMTUxWiIsImF2YXRhcl9taW1ldHlwZSI6bnVsbH0sImlhdCI6MTc0NTcxNjI4MiwiZXhwIjoxNzQ1ODAyNjgyfQ.gE2CVIwGUq-6keLxy9m8v-MnS2oPWNWUugUgJDBu-Xk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Link}}/user/xp",
+					"host": [
+						"{{Link}}"
+					],
+					"path": [
+						"user",
+						"xp"
+					]
+				},
+				"description": "You can get all scenario in one stories. but need to give the chapter of stories in params. dont forget to use token that you get after logged in"
+			},
+			"response": []
+		},
+		{
+			"name": "SCENE",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJnZXRVc2VyIjp7InVzZXJfaWQiOjgsImVtYWlsIjoiYW5kaWhhZGlhbWFuYWhAZ21haWwuY29tIiwidXNlcm5hbWUiOiJkaWhha2ltaSIsInhwIjowLCJhdmF0YXIiOm51bGwsImhhc2hfcGFzc3dvcmQiOiIkMmIkMTAkQ2RqOUhGR0lrTmlTbUNhdnJFUi9qdTc4bUxtaHBzRVFydUZTaUFMVzBYZzFPRVRQZDYxajIiLCJjcmVhdGVkX2F0IjoiMjAyNS0wNC0yNlQxMzo0MzoyNS4xNTFaIiwidXBkYXRlZF9hdCI6IjIwMjUtMDQtMjZUMTM6NDM6MjUuMTUxWiIsImF2YXRhcl9taW1ldHlwZSI6bnVsbH0sImlhdCI6MTc0NTcxNjI4MiwiZXhwIjoxNzQ1ODAyNjgyfQ.gE2CVIwGUq-6keLxy9m8v-MnS2oPWNWUugUgJDBu-Xk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Link}}/media?filename=(1)Pilih belajar(CS).mp4",
+					"host": [
+						"{{Link}}"
+					],
+					"path": [
+						"media"
+					],
+					"query": [
+						{
+							"key": "filename",
+							"value": "(1)Pilih belajar(CS).mp4"
+						}
+					]
+				},
+				"description": "You can get all scenario in one stories. but need to give the chapter of stories in params. dont forget to use token that you get after logged in"
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "Link",
+			"value": "http://localhost:3001",
+			"type": "string"
+		},
+		{
+			"key": "TOKEN",
+			"value": "",
+			"type": "string"
+		}
+	]
+}
