@@ -1,6 +1,0 @@
-[submodule "be-pitch-pro"]
-	path = be-pitch-pro
-	url = https://github.com/Arropi/be-pitch-pro.git
-[submodule "fe-pitch-pro"]
-	path = fe-pitch-pro
-	url = https://github.com/altafparves/pitchpro-fe.git
