@@ -39,7 +39,7 @@ This monorepo contains two main subprojects:
 ## 👨‍💻 Author
 
 - GitHub: @Arropi
-- GitHub: @altafparves
+- GitHub: @Excelfthn
 
 ---
 ## 📄 License
